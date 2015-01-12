@@ -13,6 +13,7 @@
 		C45B16ED1A625FB600B52CEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45B16EC1A625FB600B52CEA /* Images.xcassets */; };
 		C45B16F01A625FB600B52CEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45B16EE1A625FB600B52CEA /* LaunchScreen.xib */; };
 		C45B16FC1A625FB700B52CEA /* StoreSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B16FB1A625FB700B52CEA /* StoreSearchTests.swift */; };
+		C45B17061A634D1D00B52CEA /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B17051A634D1D00B52CEA /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		C45B16F51A625FB700B52CEA /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45B16FA1A625FB700B52CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45B16FB1A625FB700B52CEA /* StoreSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchTests.swift; sourceTree = "<group>"; };
+		C45B17051A634D1D00B52CEA /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				C45B16E51A625FB600B52CEA /* AppDelegate.swift */,
 				C45B16E71A625FB600B52CEA /* SearchViewController.swift */,
+				C45B17051A634D1D00B52CEA /* SearchResult.swift */,
 				C45B16E91A625FB600B52CEA /* Main.storyboard */,
 				C45B16EC1A625FB600B52CEA /* Images.xcassets */,
 				C45B16EE1A625FB600B52CEA /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C45B16E81A625FB600B52CEA /* SearchViewController.swift in Sources */,
+				C45B17061A634D1D00B52CEA /* SearchResult.swift in Sources */,
 				C45B16E61A625FB600B52CEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
