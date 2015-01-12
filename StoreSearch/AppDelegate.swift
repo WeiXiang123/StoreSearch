@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        customAppearence()
         return true
     }
 
@@ -41,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func customAppearence() {
+        let barColor = UIColor(red: 20/255.0, green: 160/255.0, blue: 160/255.0, alpha: 1.0)
+        UISearchBar.appearance().barTintColor = barColor
+
+       // window!.tintColor = UIColor(red: 10/255.0, green: 80/255.0, blue: 80/255.0, alpha: 1.0)
+    }
 
 }
 

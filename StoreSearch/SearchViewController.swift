@@ -24,6 +24,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableViewInSearch.becomeFirstResponder()
+
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
         var nothingCellNib = UINib(nibName: TableViewCellIdentifiers.nothingfoundCell, bundle: nil)
         tableViewInSearch.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
