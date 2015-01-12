@@ -10,6 +10,11 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    struct TableViewCellIdentifiers {
+        static let searchResultCell = "SearchResultCell"
+        static let nothingfoundCell = "NothingFoundCell"
+    }
+
     @IBOutlet weak var tableViewInSearch: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
@@ -19,7 +24,12 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
+        var nothingCellNib = UINib(nibName: TableViewCellIdentifiers.nothingfoundCell, bundle: nil)
+        tableViewInSearch.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
+        tableViewInSearch.registerNib(nothingCellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingfoundCell)
 
+        tableViewInSearch.rowHeight = 80
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +42,7 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        println("Search text is '\(searchBar.text)'")
+        //println("Search text is '\(searchBar.text)'")
 
         searchBar.resignFirstResponder()  //hide keyboard
         searchResult.removeAll(keepCapacity: false)
@@ -69,33 +79,17 @@ extension SearchViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cellIndentifer = "searchCell"
-        var cell = tableViewInSearch.dequeueReusableCellWithIdentifier(cellIndentifer) as UITableViewCell!
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIndentifer)
-        }
-
+        //it only works when you have registered a nib with the table view.
         if searchResult.count == 0 {
-            if let textLabel = cell.textLabel {
-                textLabel.text = "(Nothing found)"
-            }
-
-            if let detailTable = cell.detailTextLabel {
-                detailTable.text = ""
-            }
+            return tableViewInSearch.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingfoundCell, forIndexPath: indexPath) as UITableViewCell
 
         }else {
-            if let textLabel = cell.textLabel {
-                textLabel.text = searchResult[indexPath.row].name
-            }
-
-            if let detailTable = cell.detailTextLabel {
-                detailTable.text = searchResult[indexPath.row].artistName
-            }
+            var cell = tableViewInSearch.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
+            cell.nameLabel.text =  searchResult[indexPath.row].name
+            cell.artistNameLabel.text = searchResult[indexPath.row].artistName
+            return cell
         }
 
-
-        return cell
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
