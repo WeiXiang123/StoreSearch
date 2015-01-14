@@ -10,6 +10,7 @@
 		C422C3C31A635FC500BB1807 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C422C3C21A635FC500BB1807 /* SearchResultCell.xib */; };
 		C422C3C51A63714300BB1807 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422C3C41A63714300BB1807 /* SearchResultCell.swift */; };
 		C422C3C91A63783B00BB1807 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C422C3C81A63783B00BB1807 /* NothingFoundCell.xib */; };
+		C422C3CB1A653BCD00BB1807 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C422C3CA1A653BCD00BB1807 /* LoadingCell.xib */; };
 		C45B16E61A625FB600B52CEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B16E51A625FB600B52CEA /* AppDelegate.swift */; };
 		C45B16E81A625FB600B52CEA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B16E71A625FB600B52CEA /* SearchViewController.swift */; };
 		C45B16EB1A625FB600B52CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45B16E91A625FB600B52CEA /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		C422C3C21A635FC500BB1807 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		C422C3C41A63714300BB1807 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		C422C3C81A63783B00BB1807 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		C422C3CA1A653BCD00BB1807 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		C45B16E01A625FB600B52CEA /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45B16E41A625FB600B52CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45B16E51A625FB600B52CEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				C45B16E51A625FB600B52CEA /* AppDelegate.swift */,
 				C45B16E71A625FB600B52CEA /* SearchViewController.swift */,
+				C422C3CA1A653BCD00BB1807 /* LoadingCell.xib */,
 				C422C3C41A63714300BB1807 /* SearchResultCell.swift */,
 				C45B17051A634D1D00B52CEA /* SearchResult.swift */,
 				C45B16E91A625FB600B52CEA /* Main.storyboard */,
@@ -196,6 +199,7 @@
 			files = (
 				C45B16EB1A625FB600B52CEA /* Main.storyboard in Resources */,
 				C45B16F01A625FB600B52CEA /* LaunchScreen.xib in Resources */,
+				C422C3CB1A653BCD00BB1807 /* LoadingCell.xib in Resources */,
 				C422C3C31A635FC500BB1807 /* SearchResultCell.xib in Resources */,
 				C422C3C91A63783B00BB1807 /* NothingFoundCell.xib in Resources */,
 				C45B16ED1A625FB600B52CEA /* Images.xcassets in Resources */,
